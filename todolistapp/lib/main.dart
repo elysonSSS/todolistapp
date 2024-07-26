@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:todolistapp/login_screen.dart';
-import 'package:todolistapp/singup_screen.dart';
+import 'package:todolistapp/signup_screen.dart';
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();

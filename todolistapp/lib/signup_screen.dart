@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:todolistapp/home_screen.dart';
 import 'package:todolistapp/services/auth_services.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -15,7 +16,7 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xFF1d2630),
         foregroundColor: Colors.white,
-        title: Text("Crie uma Conta"),
+        title: Text("Lista de tarefas"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -69,6 +70,8 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 50),
+                SizedBox(height: 50,
+                width: MediaQuery.of(context).size.width/1.5, child:
                 ElevatedButton(onPressed: ()async{
                   User? user = await _auth.registerWithEmailAndPassword(
                     _emailController.text,
@@ -76,9 +79,17 @@ class SignupScreen extends StatelessWidget {
                   );
                   
                   if(user!=null){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen())
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(),));
                   }
-                }, child: child)
+                }, 
+                child: Text(
+                  "Cadastrar",
+                  style: TextStyle(
+                    color: Colors.indigo,
+                    fontSize: 18,
+                ),
+                )),
+                )
             ],
             ),    
           ) ,
