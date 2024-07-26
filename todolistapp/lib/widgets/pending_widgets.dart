@@ -180,7 +180,7 @@ class _PendingWidgetState extends State<PendingWidget> {
                 }
                 Navigator.pop(context);
               },
-              child: Text(todo == null ? "Add" : "Update"),
+              child: Text(todo == null ? "Adicionar" : "Atualizar"),
             ),
           ],
         );
