@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:todolistapp/home_screen.dart';
+import 'package:todolistapp/login_screen.dart';
 import 'package:todolistapp/services/auth_services.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -89,7 +90,16 @@ class SignupScreen extends StatelessWidget {
                     fontSize: 18,
                 ),
                 )),
-                )
+                ),
+                SizedBox(height: 20),
+                Text("Já tem conta?", style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(height: 20),
+                TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+                  }, child: Text("Entrar", style: TextStyle(fontSize: 18),))
+                
             ],
             ),    
           ) ,
