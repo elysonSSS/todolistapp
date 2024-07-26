@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:todolistapp/home_screen.dart';
-import 'package:todolistapp/login_screen.dart';
+import 'package:todolistapp/screens/home_screen.dart';
+import 'package:todolistapp/screens/login_screen.dart';
 import 'package:todolistapp/services/auth_services.dart';
 
 class SignupScreen extends StatelessWidget {

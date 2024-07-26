@@ -1,0 +1,15 @@
+decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              //begin: Alignment.topLeft,
+              //end: Alignment.bottomRight,
+              colors: [
+                Colors.cyanAccent,
+                Color.fromARGB(255, 250, 137, 175),
+                Colors.cyanAccent,
+                Color.fromARGB(255, 250, 137, 175),
+                Colors.cyanAccent,
+                Color.fromARGB(255, 250, 137, 175),
+                Colors.cyanAccent,
+              ],
+            ),
+          ),
