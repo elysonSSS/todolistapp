@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:todolistapp/home_screen.dart';
 import 'package:todolistapp/services/auth_services.dart';
+import 'package:todolistapp/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final AuthService _auth = AuthService();
@@ -73,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 50,
                 width: MediaQuery.of(context).size.width/1.5, child:
                 ElevatedButton(onPressed: ()async{
-                  User? user = await _auth.registerWithEmailAndPassword(
+                  User? user = await _auth.signInWithEmailAndPassword(
                     _emailController.text,
                     _passController.text,
                   );
@@ -89,7 +90,15 @@ class LoginScreen extends StatelessWidget {
                     fontSize: 18,
                 ),
                 )),
-                )
+                ),
+                SizedBox(height: 20),
+                Text("Ainda não tem uma conta?", style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(height: 20),
+                TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen(),));
+                  }, child: Text("Criar uma conta", style: TextStyle(fontSize: 18),))
             ],
             ),    
           ) ,
